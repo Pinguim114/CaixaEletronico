@@ -10,6 +10,7 @@ int main(){
     float saque;
     int confcancelsaque;
     int confcanceldeposito;
+    int confcancelversaldo;
     float deposito;
     float saldo = 100;
 
@@ -63,7 +64,22 @@ _sleep(1000);
                                             printf("Carregando...\n");
                                             _sleep(1000);
                                             system("cls");
-                                            printf("Retire seu dinheiro no local abaixo\n\tVVVVV");                                            
+                                            printf("Retire seu dinheiro no local abaixo\n\tVVVVV");
+                                            _sleep(1000);
+                                            system("cls");
+                                            printf("Carregando...\n");
+                                            _sleep(1000);
+                                            printf("Quer voltar para o Menu Inicial?\n");
+                                            printf("1-Confirmar\t2-Cancelar\n");
+                                            scanf("%d", &confcancelsaque);
+                                            system("cls");
+                                                if (confcancelsaque == 1)
+                                                {
+                                                    goto inicio;
+                                                }
+                                                
+
+                                                                                   
                                             break;
                                         }
                                         
@@ -100,8 +116,19 @@ _sleep(1000);
                         break;
                     
                     case 3:
-                        printf("<>Ver Saldo<>\n");
+                        printf("\t<>Ver Saldo<>\n");
+                        printf("Seu saldo e: %2.2f\n", saldo);
+                        printf("\t\t Quer voltar para o menu de opcoes?: \n\t\t1-Confirmar\t2-Cancelar\n");
+                        scanf("%d", &confcancelversaldo);
+                        system("cls");
 
+                            if (confcancelversaldo == 1)
+                            {
+                                goto inicio;
+                            }else{
+                                break;
+                            }
+                            
                         break;
                     default:
                         break;
